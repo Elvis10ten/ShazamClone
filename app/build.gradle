@@ -39,21 +39,15 @@ android {
 
     productFlavors {
 
-        dev {
-            dimension "default"
-            applicationIdSuffix '.dev'
-            versionNameSuffix "-dev"
-            resValue "string", "app_name", "Shazam Clone Dev"
-
-            // [Performance optimization] The following configuration limits the "dev" flavor
-            // to using English string resources and xxhdpi screen-density resources.
-            resConfigs "en", "xxhdpi"
-        }
         mock {
             dimension "default"
             applicationIdSuffix '.mock'
             versionNameSuffix "-mock"
             resValue "string", "app_name", "Shazam Clone Mock"
+
+            // [Performance optimization] The following configuration limits the "mock" flavor
+            // to using English string resources and xxhdpi screen-density resources.
+            resConfigs "en", "xxhdpi"
         }
         prod {
             dimension "default"
